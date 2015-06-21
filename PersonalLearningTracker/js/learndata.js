@@ -160,7 +160,7 @@ var other = {
 
 
 
-//add the app data to data variable
+//add the app data to data variable by pushing
 
 data.push(java);
 data.push(spring);
