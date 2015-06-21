@@ -1,0 +1,52 @@
+<div>
+    <h2>Day wise Learning Calendar</h2>
+       
+    <div class="row col-md-3 tile" ng-repeat="courseday in coursedays">
+        <span>Day {{$index+1}} </span>
+    
+        
+            <table> 
+                <tr>
+        <th>
+            Course Name
+        </th>
+        <th class="text-center">
+            Check if completed
+        </th>
+        </tr>
+        
+            <tr ng-repeat="courselink in courseday.links">
+                <td>
+                    <a href="{{courselink.href}}" target="_blank">{{courselink.title}}</a>
+                </td>
+                <td class="text-center">
+                     <input type="checkbox" ng-model="courselink.status"/>
+                </td>
+            </tr>
+            
+            
+            </table>
+        
+        
+     </div>   
+        
+    
+    <div class="row col-md-6">
+        
+          <div>
+            <p>
+                <a href="#/"> Back to Home</a>
+            </p>
+            
+        </div>
+          <p>
+            <button class="btn btn-success" ng-click="save();"><i class="icon-hdd icon-white"></i> Save</button>
+            <button class="btn btn-success" ng-click="clear();"><i class="icon-hdd icon-white"></i> Clear</button>
+            
+          </p>
+         
+        </div>
+        
+    
+      
+   

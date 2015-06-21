@@ -1,0 +1,14 @@
+<div class="container courses">
+    <h2>Rogers Learning Courses for this month</h2>
+    <div class="row">
+        <div class="col-md-4 tile" ng-repeat="course in courses">
+            <img width="80px" height="50px" src="{{course.thumbnail}}"/>
+            <div>
+                <h3>{{course.localizedName}}</h3>
+            </div>
+            <div> <p>Course completion progress %</p></div>
+            <div progressbar max="100" animate="false" value="calculateProgress(course)" type="success">{{calculateProgress(course)}}%</div>
+            <p><span class="btn btn-default" role="button" ng-click="showCourseDetails(course)">View details »</span></p>
+        </div>
+    </div>
+</div>
